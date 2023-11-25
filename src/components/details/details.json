@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_details_details",
+  "info": {
+    "displayName": "details",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "hasAirConditioner": {
+      "type": "boolean"
+    },
+    "hasTv": {
+      "type": "boolean"
+    },
+    "hasPool": {
+      "type": "boolean"
+    },
+    "hasBisetka": {
+      "type": "boolean"
+    },
+    "hasBarbecue": {
+      "type": "boolean"
+    },
+    "hasSamovar": {
+      "type": "boolean"
+    }
+  }
+}

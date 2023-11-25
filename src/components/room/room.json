@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_room_rooms",
+  "info": {
+    "displayName": "room",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "yataq otagi",
+        "qonaq otagi"
+      ],
+      "required": true,
+      "default": "yataq otagi"
+    },
+    "size": {
+      "type": "integer"
+    },
+    "floor": {
+      "type": "integer"
+    },
+    "beds": {
+      "displayName": "beds",
+      "type": "component",
+      "repeatable": true,
+      "component": "beds.beds"
+    }
+  }
+}
