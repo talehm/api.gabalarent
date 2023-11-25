@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_hovuz_hovuzs",
+  "info": {
+    "displayName": "hovuz",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "length": {
+      "type": "integer"
+    },
+    "width": {
+      "type": "integer"
+    }
+  }
+}

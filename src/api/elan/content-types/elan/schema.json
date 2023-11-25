@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "elanlar",
+  "info": {
+    "singularName": "elan",
+    "pluralName": "elanlar",
+    "displayName": "elanlar",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "room": {
+      "displayName": "room",
+      "type": "component",
+      "repeatable": true,
+      "component": "room.room"
+    },
+    "floor": {
+      "type": "integer"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "melumat": {
+      "type": "richtext"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "pool": {
+      "displayName": "hovuz",
+      "type": "component",
+      "repeatable": false,
+      "component": "hovuz.hovuz"
+    },
+    "address": {
+      "type": "text"
+    },
+    "location": {
+      "type": "enumeration",
+      "enum": [
+        "seher",
+        "vendam"
+      ]
+    },
+    "details": {
+      "displayName": "details",
+      "type": "component",
+      "repeatable": false,
+      "component": "details.details"
+    }
+  }
+}
