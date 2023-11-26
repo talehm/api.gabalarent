@@ -6,5 +6,13 @@ module.exports = ({ env }) => ({
   },
   webhooks: {
     populateRelations: env.bool('WEBHOOKS_POPULATE_RELATIONS', false),
-  },
+	},
+	settings: {
+		// ... other settings
+		session: {
+				// ... other session configurations
+				// Add the following line
+				keys: ['myKeyA', 'myKeyB'],
+		},
+},
 });
