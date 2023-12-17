@@ -15,7 +15,7 @@
     "name": {
       "type": "string"
     },
-    "room": {
+    "rooms": {
       "displayName": "room",
       "type": "component",
       "repeatable": true,
@@ -62,6 +62,19 @@
       "type": "component",
       "repeatable": false,
       "component": "details.details"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "aframe",
+        "villa",
+        "kend evi",
+        "standard"
+      ]
     }
   }
 }

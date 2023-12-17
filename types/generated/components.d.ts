@@ -47,12 +47,10 @@ export interface RoomRoom extends Schema.Component {
     description: '';
   };
   attributes: {
-    type: Attribute.Enumeration<['yataq otagi', 'qonaq otagi']> &
-      Attribute.Required &
-      Attribute.DefaultTo<'yataq otagi'>;
     size: Attribute.Integer;
     floor: Attribute.Integer;
     beds: Attribute.Component<'beds.beds', true>;
+    type: Attribute.Enumeration<['livingroom', 'bedroom', 'kitchen']>;
   };
 }
 
