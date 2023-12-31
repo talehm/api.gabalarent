@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_meta_info_meta_infos",
+  "info": {
+    "displayName": "metaInfo"
+  },
+  "options": {},
+  "attributes": {
+    "totalBeds": {
+      "type": "integer"
+    }
+  }
+}

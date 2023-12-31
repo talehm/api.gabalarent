@@ -40,6 +40,16 @@ export interface HovuzHovuz extends Schema.Component {
   };
 }
 
+export interface MetaInfoMetaInfo extends Schema.Component {
+  collectionName: 'components_meta_info_meta_infos';
+  info: {
+    displayName: 'metaInfo';
+  };
+  attributes: {
+    totalBeds: Attribute.Integer;
+  };
+}
+
 export interface RoomRoom extends Schema.Component {
   collectionName: 'components_room_rooms';
   info: {
@@ -60,6 +70,7 @@ declare module '@strapi/types' {
       'beds.beds': BedsBeds;
       'details.details': DetailsDetails;
       'hovuz.hovuz': HovuzHovuz;
+      'meta-info.meta-info': MetaInfoMetaInfo;
       'room.room': RoomRoom;
     }
   }

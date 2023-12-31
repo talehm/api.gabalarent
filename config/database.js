@@ -78,7 +78,6 @@ module.exports = ({ env }) => {
           env('DATABASE_FILENAME', '.tmp/data.db')
         ),
 					},
-						autoMigration: false, // Disable automatic migration
       useNullAsDefault: true,
     },
   };

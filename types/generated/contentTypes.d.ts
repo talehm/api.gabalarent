@@ -373,19 +373,92 @@ export interface ApiElanElan extends Schema.CollectionType {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    name: Attribute.String;
-    rooms: Attribute.Component<'room.room', true>;
-    floor: Attribute.Integer;
-    images: Attribute.Media;
-    melumat: Attribute.RichText;
-    price: Attribute.Integer;
-    pool: Attribute.Component<'hovuz.hovuz'>;
-    address: Attribute.Text;
-    location: Attribute.Enumeration<['seher', 'vendam']>;
-    details: Attribute.Component<'details.details'>;
+    name: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    rooms: Attribute.Component<'room.room', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    floor: Attribute.Integer &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    images: Attribute.Media &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    melumat: Attribute.RichText &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    price: Attribute.Integer &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    pool: Attribute.Component<'hovuz.hovuz'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    address: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    location: Attribute.Enumeration<['seher', 'vendam']> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    details: Attribute.Component<'details.details'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     slug: Attribute.UID<'api::elan.elan', 'name'>;
-    type: Attribute.Enumeration<['aframe', 'villa', 'kend evi', 'standard']>;
+    type: Attribute.Enumeration<['aframe', 'villa', 'kend evi', 'standard']> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    isVIP: Attribute.Boolean &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.DefaultTo<false>;
+    metaInfo: Attribute.Component<'meta-info.meta-info'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -393,6 +466,12 @@ export interface ApiElanElan extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::elan.elan', 'oneToOne', 'admin::user'> &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::elan.elan',
+      'oneToMany',
+      'api::elan.elan'
+    >;
+    locale: Attribute.String;
     sitemap_exclude: Attribute.Boolean &
       Attribute.Private &
       Attribute.DefaultTo<false>;

@@ -4,7 +4,7 @@ module.exports = ({ env }) => ({
 	},
 	rest: {
 			prefix: '/v1/api',
-			defaultLimit: 9,
+			defaultLimit: 12,
 			maxLimit: 100,
 			withCount: true,
 	},
